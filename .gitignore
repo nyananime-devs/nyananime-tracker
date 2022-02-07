@@ -1,0 +1,9 @@
+# Configurations
+.env
+
+# Build
+build/**/*
+*.log
+
+# Node non-sense
+node_modules/**/*

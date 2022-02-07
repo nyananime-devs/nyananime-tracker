@@ -1,0 +1,19 @@
+services:
+  nyananime-xyz-tracker:
+    container_name: nyananime-xyz-tracker
+    image: nyananime-xyz-tracker:latest
+    restart: "always"
+    ports:
+      - "448:448"
+    networks:
+      - cute-femboys-internal
+      - nyananime-xyz-tracker
+    build: 
+      context: ./
+      dockerfile: .docker/images/nyananime-xyz-tracker/Dockerfile
+    tty: yes
+networks:
+  cute-femboys-internal:
+    external: true
+  nyananime-xyz-tracker:
+    name: nyananime-xyz-tracker
